@@ -1,0 +1,25 @@
+{
+	"console.log": {
+		"description": "console.log",
+		"prefix": "cl",
+		"body": [
+			"console.log('[SG]', '${1:message}', ${2:content});"
+		]
+	},
+	"arrow-function": {
+		"description": "Arrow function",
+		"prefix": "af",
+		"body": [
+			"(${1:arguments}) => {",
+			"	${2:body}",
+			"}",
+		]
+	},
+	"eslint-disable-line": {
+		"description": "ESLint disable line",
+		"prefix": "esdl",
+		"body": [
+			" // eslint-disable-line"
+		]
+	}
+}
