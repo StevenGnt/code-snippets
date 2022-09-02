@@ -3,7 +3,7 @@
 		"description": "console.log",
 		"prefix": "cl",
 		"body": [
-			"console.log('[SG]', '${1:message}', ${2:content});"
+			"console.log('[SG]', '${1:Variable}', ${1:Variable});"
 		]
 	},
 	"arrow-function": {
@@ -100,4 +100,11 @@
 			""
 		]
 	},
+	"react-hook-use-state": {
+		"description": "React hook useState()",
+		"prefix": "rhus",
+		"body": [
+			"const [${1:Name}, set${1}] = useState(${2:Default value});"
+		]
+	}
 }
