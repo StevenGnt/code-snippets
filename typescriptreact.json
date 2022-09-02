@@ -1,0 +1,108 @@
+{
+	"console.log": {
+		"description": "console.log",
+		"prefix": "cl",
+		"body": [
+			"console.log('[SG]', '${1:Variable}', ${1:Variable});"
+		]
+	},
+	"arrow-function": {
+		"description": "Arrow function",
+		"prefix": "af",
+		"body": [
+			"(${1:arguments}) => {",
+			"	${2:body}",
+			"}",
+		]
+	},
+	"eslint-disable-line": {
+		"description": "ESLint disable line",
+		"prefix": "esdl",
+		"body": [
+			" // eslint-disable-line"
+		]
+	},
+	"redux-saga": {
+		"description": "Redux Saga file",
+		"prefix": "rs",
+		"body": [
+			"import { takeEvery } from 'redux-saga/effects';",
+			"",
+			"export function* ${1:Saga name}(action) {",
+			"",
+			"}",
+			"",
+			"export default function* () {",
+			"\tyield takeEvery(${2:Action name}, ${1:Saga name});",
+			"}",
+			""
+		]
+	},
+	"redux-action-creator": {
+		"description": "Redux Action Creator",
+		"prefix": "rac",
+		"body": [
+			"export function ${1:Action creator name}(${2:Payload content}) {",
+			"	return {",
+			"		type: ${3:Action name},",
+			"		payload: ${2:Payload content},",
+			"	};",
+			"}",
+		]
+	},
+	"redux-action-types": {
+		"description": "Redux action types (action + action_SUCCESS + action_FAILURE)",
+		"prefix": "rat",
+		"body": [
+			"${1:Action type}: '${1:Action type}',",
+			"${1:Action type}_SUCCESS: '${1:Action type}_SUCCESS',",
+			"${1:Action type}_FAILURE: '${1:Action type}_FAILURE',",
+		],
+	},
+	"react-component": {
+		"description": "React component (with imports and prop types)",
+		"prefix": "rcpnt",
+		"body": [
+			"import React from 'react';",
+			"",
+			"type ${1:Component name}PropTypes = {};",
+			"",
+			"function ${1:Component name}(props: ${1:Component name}PropTypes) {",
+			"	return null;",
+			"}",
+			"",
+			"export default ${1:Component name};",
+			""
+		]
+	},
+	"react-component-test": {
+		"description": "React component tests (with imports and prop types)",
+		"prefix": "rcpnttst",
+		"body": [
+			"import React from 'react';",
+			"import { shallow } from 'enzyme';",
+			"",
+			"import ${1:Component name} from './${1:Component name}';",
+			"",
+			"describe('${1:Component name}', () => {",
+			"	const defaultProps = {};",
+			"",
+			"	it('should render ${1:Component name}', () => {",
+			"		// when",
+			"		const wrapper = shallow(<${1:Component name} {...defaultProps} />);",
+			"",
+			"		// then",
+			"		expect(wrapper.getElement()).toMatchSnapshot();",
+			"	});",
+			"});",
+			""
+		]
+	},
+	"react-hook-use-state": {
+		"description": "React hook useState()",
+		"prefix": "rhus",
+		"body": [
+			"const [${1:Name}, set${1}] = useState(${2:Default value});"
+		]
+	}
+}
